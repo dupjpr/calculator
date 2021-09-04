@@ -1,10 +1,12 @@
 const LOADING = 'LOADING';
 const GET_PROFILE = 'GET_PROFILE';
 const ERROR = 'ERROR';
+const INPUT_FILTER = 'INPUT_FILTER'
 
 export { 
   LOADING, 
   GET_PROFILE, 
-  ERROR
+  ERROR,
+  INPUT_FILTER 
  };
  

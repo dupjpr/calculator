@@ -1,7 +1,8 @@
 import {
   LOADING,
   GET_PROFILE,
-  ERROR
+  ERROR,
+  INPUT_FILTER
 } from '../../utilities/constants';
 
 const rootReducer = (state, action) => {
@@ -15,12 +16,18 @@ const rootReducer = (state, action) => {
     case GET_PROFILE:
       return {
         ...state,
-        data: action.payload
+        data: action.payload,
+        filterData: action.payload,
       }
     case ERROR:
       return {
         ...state,
         error: action.payload
+      }
+    case INPUT_FILTER:
+      return {
+        ...state,
+        filter: { ...state.filter, ...action.payload }
       }
     default:
       return state
